@@ -1,0 +1,32 @@
+.header-section {
+  min-height: 90vh;
+  background-color: #fadff1;
+  text-transform: uppercase;
+  text-align: center;
+}
+.header-section__wrapper {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.header-section__wrapper img {
+  animation-name: titleImg;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes titleImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
