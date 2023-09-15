@@ -1,0 +1,23 @@
+.footer {
+  padding: 10px 10px;
+  background-color: #ef96d0;
+  width: 100%;
+}
+.footer-links {
+  font-weight: 700;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: 680px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.footer-links a {
+  color: #0a3159;
+  &:hover {
+    color: darken(#0a3159, 20%);
+    text-decoration: underline;
+  }
+}

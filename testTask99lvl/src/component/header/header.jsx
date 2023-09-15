@@ -34,8 +34,8 @@ export default function Header() {
             <img
               src="../../public/img/logo.jpg"
               alt=""
-              width={200}
-              height={150}
+              width={250}
+              height={120}
             />
           </a>
           <ul

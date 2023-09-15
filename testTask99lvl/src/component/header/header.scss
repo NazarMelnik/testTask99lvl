@@ -4,7 +4,7 @@
 }
 .header-nav {
   display: flex;
-  max-height: 150px;
+  max-height: 120px;
   align-items: center;
   justify-content: space-around;
 }
@@ -20,6 +20,7 @@
   color: #0a3159;
   &:hover {
     color: darken(#0a3159, 20%);
+    text-decoration: underline;
   }
 }
 .burger-menu {
