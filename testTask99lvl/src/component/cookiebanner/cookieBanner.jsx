@@ -1,5 +1,6 @@
-import { Box, Button, Modal, Typography } from "@mui/material";
+import { Box, Modal, Typography } from "@mui/material";
 import { useState } from "react";
+import Cookies from "js-cookie";
 
 export default function CookieBanner(props) {
   const style = {
@@ -15,14 +16,20 @@ export default function CookieBanner(props) {
     p: 2,
   };
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  if (props.show) {
+  const handleAccept = () => {
+    // Зберігаємо куки з позначкою "accepted" на 365 днів
+    Cookies.set("cookieAccepted", true, { expires: 365 });
+    handleClose();
+  };
+
+  if (props.show && !Cookies.get("cookieAccepted")) {
+    // Перевіряємо, чи користувач ще не погодився з куками
     return (
       <Box>
-        <Button onClick={handleOpen}>Open modal</Button>
         <Modal
           open={open}
           onClose={handleClose}
@@ -42,7 +49,9 @@ export default function CookieBanner(props) {
                 gap: "10px",
                 m: 2,
               }}>
-              <button className="cookie-btn accept-btn">accept</button>
+              <button className="cookie-btn accept-btn" onClick={handleAccept}>
+                accept
+              </button>
               <button className="cookie-btn reject-btn" onClick={handleClose}>
                 reject
               </button>
