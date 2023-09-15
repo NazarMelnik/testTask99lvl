@@ -9,7 +9,7 @@ export default function Product() {
       .then((data) => {
         setBags(data);
       });
-  }, []);
+  }, [bags]);
 
   return (
     <section className="product-section" id="services">

@@ -12,7 +12,7 @@ export default function Feedback() {
       .then((data) => {
         setReviews(data);
       });
-  }, []);
+  }, [reviews]);
 
   const settings = {
     dots: false,
