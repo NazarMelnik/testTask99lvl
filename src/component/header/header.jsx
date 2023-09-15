@@ -33,12 +33,7 @@ export default function Header() {
       <div className="container">
         <nav className="header-nav">
           <a href="#">
-            <img
-              src="../../public/img/logo.jpg"
-              alt=""
-              width={250}
-              height={120}
-            />
+            <img src="/img/logo.jpg" alt="" width={250} height={120} />
           </a>
           <ul
             className={

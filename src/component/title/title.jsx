@@ -6,12 +6,7 @@ export default function Title() {
           <h2 className="section-title">
             HEY, HERE ARE THE BAGS OF YOUR DREAMS{" "}
           </h2>
-          <img
-            src="../../../public/img/title.PNG"
-            alt=""
-            width={300}
-            height={300}
-          />
+          <img src="/img/title.PNG" alt="" width={300} height={300} />
           <h1 className="header-slogan">
             Wow look is a brand of stylish and practical eco-leather bags
           </h1>

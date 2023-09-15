@@ -4,12 +4,7 @@ export default function About() {
       <div className="container">
         <h2 className="section-title about-title">About us</h2>
         <div className="about-section__wrapper">
-          <img
-            src="../../../public/img/1.jpg"
-            alt="image"
-            width={300}
-            height={300}
-          />
+          <img src="/img/1.jpg" alt="image" width={300} height={300} />
           <div className="about-text">
             <p>
               Wow look is a brand of stylish and practical bags made of eco

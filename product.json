@@ -4,41 +4,41 @@
     "name": "Black Bag",
     "price": 49.99,
     "description": "Elegant black bag for any occasion.",
-    "image_url": "/public/img/product/1.jpg"
+    "image_url": "/img/product/1.jpg"
   },
   {
     "id": 2,
     "name": "Messenger Bag",
     "price": 59.99,
     "description": "Stylish messenger bag for comfort and practicality.",
-    "image_url": "/public/img/product/2.jpg"
+    "image_url": "/img/product/2.jpg"
   },
   {
     "id": 3,
     "name": "Red Bag",
     "price": 39.99,
     "description": "Vibrant red bag that adds a pop of color to your outfit.",
-    "image_url": "/public/img/product/3.jpg"
+    "image_url": "/img/product/3.jpg"
   },
   {
     "id": 4,
     "name": "Leather Tote Bag",
     "price": 79.99,
     "description": "Classic leather tote bag for a timeless look.",
-    "image_url": "/public/img/product/4.jpg"
+    "image_url": "/img/product/4.jpg"
   },
   {
     "id": 5,
     "name": "Canvas Backpack",
     "price": 49.99,
     "description": "Durable canvas backpack for your everyday adventures.",
-    "image_url": "/public/img/product/5.jpg"
+    "image_url": "/img/product/5.jpg"
   },
   {
     "id": 6,
     "name": "Vintage Clutch",
     "price": 69.99,
     "description": "Chic vintage clutch for a touch of retro charm.",
-    "image_url": "/public/img/product/6.jpg"
+    "image_url": "/img/product/6.jpg"
   }
 ]
