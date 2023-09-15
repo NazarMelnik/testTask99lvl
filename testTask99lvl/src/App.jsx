@@ -1,4 +1,5 @@
 import About from "./component/about/about";
+import Contact from "./component/contact/contant";
 import Feedback from "./component/feedback/feedback";
 import Footer from "./component/footer/footer";
 import Header from "./component/header/header";
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Product />
       <Feedback />
+      <Contact />
       <Footer />
     </>
   );

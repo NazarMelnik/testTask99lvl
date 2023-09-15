@@ -16,6 +16,8 @@ export default function Header() {
         !burgerMenuRef.current.contains(e.target)
       ) {
         setBurger(!burger);
+      } else {
+        return;
       }
     };
 

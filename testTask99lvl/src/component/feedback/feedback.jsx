@@ -21,7 +21,6 @@ export default function Feedback() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
   return (
     <section className="feedback-section" id="feedback">
       <div className="container">

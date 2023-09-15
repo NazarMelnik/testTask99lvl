@@ -1,0 +1,17 @@
+.contact-section {
+  padding: 50px 10px;
+  background-color: #fadff1;
+}
+.contact__wrapper {
+  padding: 50px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.contact-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
