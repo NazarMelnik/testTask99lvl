@@ -24,6 +24,21 @@
   margin-right: 20px;
   z-index: 9999;
 }
+.header-nav-items li a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  background-color: #ef96d0;
+  color: #fefefe;
+  &:hover {
+    background-color: darken(#ef96d0, 20%);
+    color: #ffff;
+  }
+  &:active {
+    background-color: darken(#ef96d0, 30%);
+  }
+}
 .header-nav-items a {
   color: #0a3159;
   &:hover {

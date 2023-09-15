@@ -84,7 +84,7 @@ export default function Form() {
         ) : null}
         <button
           type="submit"
-          className="header-section-btn checkout-button"
+          className="form-btn accept-btn"
           onSubmit={formik.handleSubmit}>
           Order
         </button>

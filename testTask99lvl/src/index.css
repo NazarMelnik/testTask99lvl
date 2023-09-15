@@ -7,14 +7,18 @@
 @import url("./component/contact/contact.scss");
 @import url("./component/form/form.scss");
 @import url("./component/footer/footer.scss");
+@import url("./component/cookiebanner/cookie.scss");
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Roboto Mono", monospace;
   min-height: 100vh;
   max-width: 100%;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #fadff1 #fadff1;
 }
 .container {
   margin-left: auto;

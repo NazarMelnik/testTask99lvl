@@ -1,0 +1,28 @@
+.cookie-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+.accept-btn {
+  background-color: #4caf50;
+  color: #fefefe;
+  &:hover {
+    background-color: darken(#4caf50, 20%);
+    color: #fff;
+  }
+  &:active {
+    background-color: darken(#4caf50, 40%);
+  }
+}
+.reject-btn {
+  background-color: #ef96d0;
+  color: #fefefe;
+  &:hover {
+    background-color: darken(#ef96d0, 20%);
+    color: #ffff;
+  }
+  &:active {
+    background-color: darken(#ef96d0, 30%);
+  }
+}
