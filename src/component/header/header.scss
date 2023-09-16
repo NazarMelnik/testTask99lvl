@@ -93,10 +93,11 @@
     gap: 25px;
     position: absolute;
     right: 0;
+    left: 0;
     top: 104px;
     background-color: darken(#ef96d0, 10%);
     padding: 20px;
-    width: 170px;
+    width: 100%;
   }
   .header-nav-items a {
     text-align: left;
