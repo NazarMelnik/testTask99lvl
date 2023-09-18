@@ -22,7 +22,18 @@ export default function About() {
           About us
         </motion.h2>
         <div className="about-section__wrapper">
-          <img src="/img/1.jpg" alt="image" width={280} height={280} />
+          <motion.img
+            src="/img/1.jpg"
+            alt="image"
+            width={280}
+            height={280}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            }}
+          />
           <motion.div
             className="about-text"
             initial={{ opacity: 0, x: -40 }}

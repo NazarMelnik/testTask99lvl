@@ -54,7 +54,7 @@ export default function Product() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
+                  x: 0,
                   transition: { duration: 1, ease: "easeOut" },
                 }}>
                 {bag.name}
@@ -64,7 +64,7 @@ export default function Product() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
+                  x: 0,
                   transition: { duration: 1, ease: "easeOut" },
                 }}>
                 {bag.description}
@@ -74,7 +74,7 @@ export default function Product() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{
                   opacity: 1,
-                  y: 0,
+                  x: 0,
                   transition: { duration: 1, ease: "easeOut" },
                 }}>
                 Price: ${bag.price}
