@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Product() {
   const [bags, setBags] = useState([]);
@@ -12,26 +13,76 @@ export default function Product() {
   }, []);
 
   return (
-    <section className="product-section" id="services">
+    <motion.section
+      className="product-section"
+      id="services"
+      initial={{ opacity: 0, y: -60 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 1, ease: "easeOut" },
+      }}>
       <div className="container">
-        <h2 className="section-title">Our Products</h2>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, y: -60 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}>
+          Our Products
+        </motion.h2>
         <div className="product__wrapper">
           {bags.map((bag) => (
             <div className="product-item" key={bag.id}>
-              <img
+              <motion.img
                 src={bag.image_url}
                 alt={bag.name}
                 className="product-img"
                 width={250}
                 height={300}
+                initial={{ opacity: 0, x: 40 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1, ease: "easeOut" },
+                }}
               />
-              <h3 className="product-name">{bag.name}</h3>
-              <p className="product-description">{bag.description}</p>
-              <p className="product-price">Price: ${bag.price}</p>
+              <motion.h3
+                className="product-name"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeOut" },
+                }}>
+                {bag.name}
+              </motion.h3>
+              <motion.p
+                className="product-description"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeOut" },
+                }}>
+                {bag.description}
+              </motion.p>
+              <motion.p
+                className="product-price"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1, ease: "easeOut" },
+                }}>
+                Price: ${bag.price}
+              </motion.p>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 import PersonIcon from "@mui/icons-material/Person";
 export default function Feedback() {
   const [reviews, setReviews] = useState([]);
@@ -24,9 +25,26 @@ export default function Feedback() {
     autoplaySpeed: 2500,
   };
   return (
-    <section className="feedback-section" id="feedback">
+    <motion.section
+      className="feedback-section"
+      id="feedback"
+      initial={{ opacity: 0, x: 20 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: { duration: 1, ease: "easeOut" },
+      }}>
       <div className="container">
-        <h2 className="section-title">Feedback</h2>
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}>
+          Feedback
+        </motion.h2>
         <Slider {...settings} className="feedback-slider">
           {reviews.map((review, id) => (
             <div key={id} className="feedback-review">
@@ -35,12 +53,21 @@ export default function Feedback() {
                   <PersonIcon fontSize="large" />
                   <p className="feedback-person-name">{review.name}</p>
                 </div>
-                <p className="feedback-text">{review.text}</p>
+                <motion.p
+                  className="feedback-text"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{
+                    opacity: 1,
+                    x: 0,
+                    transition: { duration: 1, ease: "easeOut" },
+                  }}>
+                  {review.text}
+                </motion.p>
               </div>
             </div>
           ))}
         </Slider>
       </div>
-    </section>
+    </motion.section>
   );
 }

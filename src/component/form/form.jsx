@@ -1,6 +1,7 @@
 import { TextField } from "@mui/material";
 import { useFormik } from "formik";
 import { PatternFormat } from "react-number-format";
+import { motion } from "framer-motion";
 import { validation } from "./validation";
 export default function Form() {
   const initialValues = {
@@ -26,7 +27,16 @@ export default function Form() {
   });
   return (
     <>
-      <form className="checkout-form" onSubmit={formik.handleSubmit}>
+      <motion.form
+        id="order"
+        className="checkout-form"
+        onSubmit={formik.handleSubmit}
+        initial={{ opacity: 0, x: 200 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 1, ease: "easeOut" },
+        }}>
         <TextField
           className="checkout-input"
           type="text"
@@ -88,7 +98,7 @@ export default function Form() {
           onSubmit={formik.handleSubmit}>
           Order
         </button>
-      </form>
+      </motion.form>
     </>
   );
 }

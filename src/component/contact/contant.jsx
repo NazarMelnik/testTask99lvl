@@ -1,13 +1,38 @@
 import Form from "../form/form";
 import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import { motion } from "framer-motion";
 import NavigationIcon from "@mui/icons-material/Navigation";
 export default function Contact() {
   return (
-    <section className="contact-section" id="contact">
+    <motion.section
+      className="contact-section"
+      id="contact"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{
+        opacity: 1,
+        x: 0,
+        transition: { duration: 1, ease: "easeOut" },
+      }}>
       <div className="container">
-        <h2 className="section-title">Any questions left?</h2>
-        <ul className="contact__wrapper">
+        <motion.h2
+          className="section-title"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}>
+          Any questions left?
+        </motion.h2>
+        <motion.ul
+          className="contact__wrapper"
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 1, ease: "easeOut" },
+          }}>
           <li className="contact-item">
             <a href="mailto:wowlook@gmail.com">
               <EmailIcon fontSize="large" />
@@ -29,9 +54,9 @@ export default function Contact() {
               Kiev,Gogol`a 62
             </a>
           </li>
-        </ul>
+        </motion.ul>
       </div>
       <Form />
-    </section>
+    </motion.section>
   );
 }
