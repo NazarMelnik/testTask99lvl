@@ -1,5 +1,4 @@
 .header {
-  min-width: 100%;
   background-color: #ef96d0;
 }
 .header-nav {
@@ -80,7 +79,7 @@
 @media (max-width: 768px) {
   .burger-menu {
     display: flex;
-    margin-right: 20px;
+    margin-right: 25px;
   }
   .header-nav-items {
     display: none;

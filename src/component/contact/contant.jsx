@@ -8,30 +8,30 @@ export default function Contact() {
     <motion.section
       className="contact-section"
       id="contact"
-      initial={{ opacity: 0, x: -20 }}
+      initial={{ opacity: 0, y: -10 }}
       whileInView={{
         opacity: 1,
-        x: 0,
-        transition: { duration: 1, ease: "easeOut" },
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
       }}>
       <div className="container">
         <motion.h2
           className="section-title"
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: 10 }}
           whileInView={{
             opacity: 1,
             x: 0,
-            transition: { duration: 1, ease: "easeOut" },
+            transition: { duration: 0.6, ease: "easeOut" },
           }}>
           Any questions left?
         </motion.h2>
         <motion.ul
           className="contact__wrapper"
-          initial={{ opacity: 0, x: 200 }}
+          initial={{ opacity: 0, x: 10 }}
           whileInView={{
             opacity: 1,
             x: 0,
-            transition: { duration: 1, ease: "easeOut" },
+            transition: { duration: 0.6, ease: "easeOut" },
           }}>
           <li className="contact-item">
             <a href="mailto:wowlook@gmail.com">

@@ -4,20 +4,20 @@ export default function About() {
     <motion.section
       className="about-section"
       id="about"
-      initial={{ opacity: 0, x: 40 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{
         opacity: 1,
-        x: 0,
-        transition: { duration: 1, ease: "easeOut" },
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
       }}>
       <div className="container">
         <motion.h2
           className="section-title about-title"
-          initial={{ opacity: 0, x: -40 }}
+          initial={{ opacity: 0, x: -10 }}
           whileInView={{
             opacity: 1,
             x: 0,
-            transition: { duration: 1, ease: "easeOut" },
+            transition: { duration: 0.6, ease: "easeOut" },
           }}>
           About us
         </motion.h2>
@@ -27,20 +27,20 @@ export default function About() {
             alt="image"
             width={280}
             height={280}
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -10 }}
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { duration: 1, ease: "easeOut" },
+              transition: { duration: 0.6, ease: "easeOut" },
             }}
           />
           <motion.div
             className="about-text"
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -10 }}
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { duration: 1, ease: "easeOut" },
+              transition: { duration: 0.6, ease: "easeOut" },
             }}>
             <p>
               ` Wow look is a brand of stylish and practical bags made of eco

@@ -31,11 +31,11 @@ export default function Form() {
         id="order"
         className="checkout-form"
         onSubmit={formik.handleSubmit}
-        initial={{ opacity: 0, x: 200 }}
+        initial={{ opacity: 0, x: 10 }}
         whileInView={{
           opacity: 1,
           x: 0,
-          transition: { duration: 1, ease: "easeOut" },
+          transition: { duration: 0.6, ease: "easeOut" },
         }}>
         <TextField
           className="checkout-input"

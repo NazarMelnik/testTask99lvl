@@ -28,20 +28,20 @@ export default function Feedback() {
     <motion.section
       className="feedback-section"
       id="feedback"
-      initial={{ opacity: 0, x: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{
         opacity: 1,
-        x: 0,
-        transition: { duration: 1, ease: "easeOut" },
+        y: 0,
+        transition: { duration: 0.6, ease: "easeOut" },
       }}>
       <div className="container">
         <motion.h2
           className="section-title"
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -10 }}
           whileInView={{
             opacity: 1,
             x: 0,
-            transition: { duration: 1, ease: "easeOut" },
+            transition: { duration: 0.6, ease: "easeOut" },
           }}>
           Feedback
         </motion.h2>
@@ -55,11 +55,11 @@ export default function Feedback() {
                 </div>
                 <motion.p
                   className="feedback-text"
-                  initial={{ opacity: 0, x: 30 }}
+                  initial={{ opacity: 0, x: 10 }}
                   whileInView={{
                     opacity: 1,
                     x: 0,
-                    transition: { duration: 1, ease: "easeOut" },
+                    transition: { duration: 0.6, ease: "easeOut" },
                   }}>
                   {review.text}
                 </motion.p>
