@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import { PatternFormat } from "react-number-format";
 import { motion } from "framer-motion";
 import { validation } from "./validation";
+import { textRightMotion } from "../motion";
 export default function Form() {
   const initialValues = {
     name: "",
@@ -31,12 +32,7 @@ export default function Form() {
         id="order"
         className="checkout-form"
         onSubmit={formik.handleSubmit}
-        initial={{ opacity: 0, x: 10 }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: { duration: 0.6, ease: "easeOut" },
-        }}>
+        {...textRightMotion}>
         <TextField
           className="checkout-input"
           type="text"

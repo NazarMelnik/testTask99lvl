@@ -1,24 +1,10 @@
 import { motion } from "framer-motion";
+import { sectionMotion, textRightMotion } from "../motion";
 export default function About() {
   return (
-    <motion.section
-      className="about-section"
-      id="about"
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
-      }}>
+    <motion.section className="about-section" id="about" {...sectionMotion}>
       <div className="container">
-        <motion.h2
-          className="section-title about-title"
-          initial={{ opacity: 0, x: -10 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
-          }}>
+        <motion.h2 className="section-title about-title" {...textRightMotion}>
           About us
         </motion.h2>
         <div className="about-section__wrapper">
@@ -27,21 +13,9 @@ export default function About() {
             alt="image"
             width={280}
             height={280}
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              transition: { duration: 0.6, ease: "easeOut" },
-            }}
+            {...textRightMotion}
           />
-          <motion.div
-            className="about-text"
-            initial={{ opacity: 0, x: -10 }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-              transition: { duration: 0.6, ease: "easeOut" },
-            }}>
+          <motion.div className="about-text" {...textRightMotion}>
             <p>
               ` Wow look is a brand of stylish and practical bags made of eco
               leather Wow look (stylish image, "Wow, look") the bag is just an

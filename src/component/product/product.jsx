@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { sectionMotion, textLeftMotion, textRightMotion } from "../motion";
 
 export default function Product() {
   const [bags, setBags] = useState([]);
@@ -16,21 +17,9 @@ export default function Product() {
     <motion.section
       className="product-section"
       id="services"
-      initial={{ opacity: 0, y: -10 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
-      }}>
+      {...sectionMotion}>
       <div className="container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
-          }}>
+        <motion.h2 className="section-title" {...textLeftMotion}>
           Our Products
         </motion.h2>
         <div className="product__wrapper">
@@ -42,41 +31,15 @@ export default function Product() {
                 className="product-img"
                 width={250}
                 height={300}
-                initial={{ opacity: 0, x: 10 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.6, ease: "easeOut" },
-                }}
+                {...textRightMotion}
               />
-              <motion.h3
-                className="product-name"
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.6, ease: "easeOut" },
-                }}>
+              <motion.h3 className="product-name" {...textLeftMotion}>
                 {bag.name}
               </motion.h3>
-              <motion.p
-                className="product-description"
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.6, ease: "easeOut" },
-                }}>
+              <motion.p className="product-description" {...textLeftMotion}>
                 {bag.description}
               </motion.p>
-              <motion.p
-                className="product-price"
-                initial={{ opacity: 0, x: -10 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.6, ease: "easeOut" },
-                }}>
+              <motion.p className="product-price" {...textLeftMotion}>
                 Price: ${bag.price}
               </motion.p>
             </div>

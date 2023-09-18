@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 import PersonIcon from "@mui/icons-material/Person";
+import { sectionMotion, textRightMotion } from "../motion";
 export default function Feedback() {
   const [reviews, setReviews] = useState([]);
 
@@ -28,21 +29,9 @@ export default function Feedback() {
     <motion.section
       className="feedback-section"
       id="feedback"
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
-      }}>
+      {...sectionMotion}>
       <div className="container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, x: -10 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
-          }}>
+        <motion.h2 className="section-title" {...textRightMotion}>
           Feedback
         </motion.h2>
         <Slider {...settings} className="feedback-slider">
@@ -53,14 +42,7 @@ export default function Feedback() {
                   <PersonIcon fontSize="large" />
                   <p className="feedback-person-name">{review.name}</p>
                 </div>
-                <motion.p
-                  className="feedback-text"
-                  initial={{ opacity: 0, x: 10 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                    transition: { duration: 0.6, ease: "easeOut" },
-                  }}>
+                <motion.p className="feedback-text" {...textRightMotion}>
                   {review.text}
                 </motion.p>
               </div>

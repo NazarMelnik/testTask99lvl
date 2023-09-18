@@ -9,7 +9,6 @@
 @import url("./component/footer/footer.scss");
 @import url("./component/cookiebanner/cookie.scss");
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -17,6 +16,7 @@ body {
   font-family: "Roboto Mono", monospace;
   min-height: 100vh;
   max-width: 100vw;
+  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: #fadff1 #fadff1;
 }

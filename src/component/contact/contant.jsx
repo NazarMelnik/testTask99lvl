@@ -3,36 +3,15 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import { motion } from "framer-motion";
 import NavigationIcon from "@mui/icons-material/Navigation";
+import { sectionMotion, textLeftMotion } from "../motion";
 export default function Contact() {
   return (
-    <motion.section
-      className="contact-section"
-      id="contact"
-      initial={{ opacity: 0, y: -10 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" },
-      }}>
+    <motion.section className="contact-section" id="contact" {...sectionMotion}>
       <div className="container">
-        <motion.h2
-          className="section-title"
-          initial={{ opacity: 0, x: 10 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
-          }}>
+        <motion.h2 className="section-title" {...textLeftMotion}>
           Any questions left?
         </motion.h2>
-        <motion.ul
-          className="contact__wrapper"
-          initial={{ opacity: 0, x: 10 }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            transition: { duration: 0.6, ease: "easeOut" },
-          }}>
+        <motion.ul className="contact__wrapper" {...textLeftMotion}>
           <li className="contact-item">
             <a href="mailto:wowlook@gmail.com">
               <EmailIcon fontSize="large" />
